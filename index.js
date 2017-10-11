@@ -3,6 +3,7 @@ const CREDS = require('./config_continente');
 const mongoose = require('mongoose');
 const User = require('./model/user');
 
+
 async function run() {
   const browser = await puppeteer.launch({
     headless: true
@@ -69,11 +70,11 @@ const LENGTH_SELECTOR_CLASS = 'clickable-row';
 
     console.log(data, ' -> ', total);
 
-    upsertUser({
+    /*upsertUser({
       data: data,
       total: total,
       dateCrawled: new Date()
-    });
+    });*/
 }
   
 
@@ -89,11 +90,10 @@ function upsertUser(userObj) {
     mongoose.connect(DB_URL);
   }
 
-  // if this email exists, update the entry, don't insert
-  const conditions = { email: userObj.email };
+  
   const options = { upsert: true, new: true, setDefaultsOnInsert: true };
 
-  User.findOneAndUpdate(conditions, userObj, options, (err, result) => {
+  User.findOneAndUpdate(null, userObj, options, (err, result) => {
     if (err) {
       throw err;
     }

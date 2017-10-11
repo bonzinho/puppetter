@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 let userSchema = new mongoose.Schema({
-    data: Date,
+    data: String,
     total: String,
     dateCrawled: Date
 });

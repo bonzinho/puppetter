@@ -4,6 +4,7 @@
   "description": "crawler test",
   "main": "screenshot.js",
   "dependencies": {
+    "moment": "^2.19.1",
     "mongoose": "^4.10.8",
     "puppeteer": "^0.11.0"
   },
