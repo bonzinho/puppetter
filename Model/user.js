@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 let userSchema = new mongoose.Schema({
-    username: Date,
-    email: String,
+    data: Date,
+    total: String,
     dateCrawled: Date
 });
 
