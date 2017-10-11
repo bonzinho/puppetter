@@ -1,0 +1,19 @@
+{
+  "name": "puppeteer",
+  "version": "1.0.0",
+  "description": "crawler test",
+  "main": "screenshot.js",
+  "dependencies": {
+    "mongoose": "^4.10.8",
+    "puppeteer": "^0.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "run"
+  },
+  "keywords": [
+    "crawler"
+  ],
+  "author": "Vitor Bonzinho",
+  "license": "MIT"
+}
